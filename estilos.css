@@ -1,37 +1,46 @@
 body {
-  font-family: sans-serif;
-  background: white;
+  background-color: white;
   color: black;
+  font-family: Helvetica, sans-serif;
   margin: 20px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
 }
 
-#malla {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 10px;
+.malla-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }
 
-.materia {
+.ramo {
   border: 2px solid black;
   padding: 10px;
+  width: 180px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  background: white;
+  background-color: #f0f0f0;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.materia.bloqueada {
-  background: #eee;
-  color: #999;
+.ramo.locked {
+  background-color: #ddd;
+  color: #777;
   cursor: not-allowed;
+  border: 2px dashed #777;
 }
 
-.materia.aprobada {
-  background: black;
+.ramo.approved {
+  background-color: black;
   color: white;
 }
 
+.uc {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
